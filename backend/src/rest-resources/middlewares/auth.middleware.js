@@ -6,6 +6,7 @@ import { UnauthorizedError } from '../../errors/unauthorized.error.js';
 export async function authMiddleware(req,res,next) {
       
     const {User } = models;
+
     if(!req.headers.authorization) throw new Error('Unauthorized');
    
     const token = req.headers.authorization.split(' ')[1];
@@ -13,15 +14,20 @@ export async function authMiddleware(req,res,next) {
     try {
           const payload = await decodeToken(token);
           
-          if(!payload.id)  throw new Error('Unauthorized');
+          if(!payload.user)  throw new Error('Unauthorized');
         
-          const authUser = await User.findOne({
-             where : {id : payload.id}
-          });
+          const authUser = await User.findByPk(payload.user.id);
 
-        if(!authUser) throw new Error('Unauthorized');
+         if(!authUser) throw new Error('Unauthorized');
+
+        req.auth = { 
+            auth_id : authUser.id
+        }
+        
         next();  
+
     } catch(error){
+      
       console.log(error)
       
        next(new UnauthorizedError());

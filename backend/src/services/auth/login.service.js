@@ -19,12 +19,10 @@ export class LoginService extends ServiceBase {
             return this.addError('InvalidCredentialErrorType');
          }
 
-         const token = await createToken(user.id);
+         const token = await createToken(user);
 
          user.dataValues.password = undefined;
-         
-         
-        
+             
          return {user,token};
 
    }   

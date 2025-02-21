@@ -89,6 +89,7 @@ class ServiceBase {
     await instance.#tryExecuting();
     return instance;
   }
+
 }
 
 export { ServiceBase };

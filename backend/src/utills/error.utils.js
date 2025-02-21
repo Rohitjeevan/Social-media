@@ -1,5 +1,3 @@
-
-
 function extractErrorAttributes(errors) {
     const errorAttributes = [];
     for (const serviceName in errors) {

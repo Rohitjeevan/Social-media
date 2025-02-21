@@ -45,6 +45,10 @@ export default (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    otp : {
+      type : DataTypes.INTEGER,
+      allowNull : true
+    }
   });
 
   User.associate = (models) => {
