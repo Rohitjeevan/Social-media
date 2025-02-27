@@ -1,5 +1,5 @@
 import { sendResponse } from "../../helpers/response.helpers.js";
-import { LoginService } from "../../services/auth/login.service.js ";
+import { LoginService } from "../../services/auth/login.service.js";
 import { LogoutService } from "../../services/auth/logout.service.js";
 import { NewPasswordService } from "../../services/auth/newPasswod.service.js";
 import { ResetPasswordService } from "../../services/auth/reset.service.js";
@@ -47,7 +47,7 @@ export class AuthController {
     static async resetPassword(req,res,next){
       try {
       
-        const {result,successful,errors} = await ResetPasswordService.execute({...req.body,...req.auth},{
+        const {result,successful,errors} = await ResetPasswordService.execute({...req.body,...req.authUser},{
           ...req.context
         });
         

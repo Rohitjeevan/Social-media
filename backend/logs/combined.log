@@ -1,0 +1,695 @@
+[PID 75507] [2025-02-27T06:31:53.058Z] Backoffice-API [32mINFO[39m: Executing (default): SELECT "id", "name", "email", "password", "age", "city", "eligible", "dob", "mobile", "gender", "private_account", "otp", "created_at" AS "_0", "updated_at" AS "_1" FROM "users" AS "User" WHERE "User"."id" = 9;
+========================================[Service Started: DisLikeService]========================================
+[PID 75507] [2025-02-27T06:31:53.064Z] Backoffice-API [32mINFO[39m: Executing (default): SELECT "id", "description", "location", "img_url", "like", "comment", "user_id" AS "_0", "created_at" AS "_1", "updated_at" AS "_2" FROM "posts" AS "Post" WHERE "Post"."id" = 1;
+[PID 75507] [2025-02-27T06:31:53.081Z] Backoffice-API [31mERROR[39m: Error in Service Message: Cannot read properties of undefined (reading 'id') class: DisLikeService context: {
+  data: {
+    post_id: 1,
+    dataValues: {
+      id: 9,
+      name: 'rohit',
+      email: 'rp6568589@gmail.com',
+      password: '$2b$10$lV48cbPW3tgtbEilA8SSxe4jMul5XfN6nLTCn8zYpwEBiD0MAt8XO',
+      age: 34,
+      city: 'indore',
+      eligible: true,
+      dob: 2015-12-12T00:00:00.000Z,
+      mobile: '1212121212',
+      gender: 'female',
+      private_account: false,
+      otp: null,
+      createdAt: 2025-02-24T09:57:49.584Z,
+      updatedAt: 2025-02-24T09:57:49.584Z
+    },
+    _previousDataValues: {
+      id: 9,
+      name: 'rohit',
+      email: 'rp6568589@gmail.com',
+      password: '$2b$10$lV48cbPW3tgtbEilA8SSxe4jMul5XfN6nLTCn8zYpwEBiD0MAt8XO',
+      age: 34,
+      city: 'indore',
+      eligible: true,
+      dob: 2015-12-12T00:00:00.000Z,
+      mobile: '1212121212',
+      gender: 'female',
+      private_account: false,
+      otp: null,
+      createdAt: 2025-02-24T09:57:49.584Z,
+      updatedAt: 2025-02-24T09:57:49.584Z
+    },
+    uniqno: 1,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: false,
+      _schema: null,
+      _schemaDelimiter: '',
+      raw: true,
+      attributes: [Array]
+    },
+    isNewRecord: false
+  },
+  traceId: 'YKsD1Oh17HzCHdKnWHjrd',
+  authId: undefined
+} exceptionBacktrace: TypeError: Cannot read properties of undefined (reading 'id')
+    at DisLikeService.call (/home/gs/Documents/projects/social-media/backend/src/services/like/disLikeService.js:16:60)
+    at tryCatch (/home/gs/Documents/projects/social-media/backend/src/services/like/disLikeService.js:2:1)
+    at Generator._invoke (/home/gs/Documents/projects/social-media/backend/src/services/like/disLikeService.js:2:1)
+    at Generator.next (/home/gs/Documents/projects/social-media/backend/src/services/like/disLikeService.js:2:1)
+    at asyncGeneratorStep (/home/gs/Documents/projects/social-media/backend/src/services/like/disLikeService.js:2:1)
+    at _next (/home/gs/Documents/projects/social-media/backend/src/services/like/disLikeService.js:2:1)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5) 
+[PID 75507] [2025-02-27T06:31:53.084Z] Backoffice-API [31mERROR[39m: TypeError in /api/v1/like/dislike Message: Cannot read properties of undefined (reading 'id') context: {
+  traceId: 'YKsD1Oh17HzCHdKnWHjrd',
+  query: {},
+  params: {},
+  body: { post_id: 1 }
+} 
+[PID 75507] [2025-02-27T06:31:53.092Z] Backoffice-API [32mINFO[39m: POST /api/v1/like/dislike 500 142 - 79.054 ms
+[PID 75507] [2025-02-27T06:31:53.106Z] Backoffice-API [32mINFO[39m: Shutting down server Message: Received SIGUSR2 
+[PID 75849] [2025-02-27T06:31:54.007Z] Backoffice-API [32mINFO[39m: Server Started  Message: Listening on 3000 
+[PID 75849] [2025-02-27T06:32:48.030Z] Backoffice-API [32mINFO[39m: Shutting down server Message: Received SIGUSR2 
+[PID 76510] [2025-02-27T06:32:49.455Z] Backoffice-API [32mINFO[39m: Server Started  Message: Listening on 3000 
+[PID 76510] [2025-02-27T06:32:52.787Z] Backoffice-API [32mINFO[39m: Executing (default): SELECT "id", "name", "email", "password", "age", "city", "eligible", "dob", "mobile", "gender", "private_account", "otp", "created_at" AS "_0", "updated_at" AS "_1" FROM "users" AS "User" WHERE "User"."id" = 9;
+========================================[Service Started: DisLikeService]========================================
+[PID 76510] [2025-02-27T06:32:52.794Z] Backoffice-API [32mINFO[39m: Executing (default): SELECT "id", "description", "location", "img_url", "like", "comment", "user_id" AS "_0", "created_at" AS "_1", "updated_at" AS "_2" FROM "posts" AS "Post" WHERE "Post"."id" = 1;
+[PID 76510] [2025-02-27T06:32:52.796Z] Backoffice-API [32mINFO[39m: Executing (default): SELECT "id", "user_id", "post_id", "created_at" AS "_0", "updated_at" AS "_1" FROM "likes" AS "Like" WHERE "Like"."post_id" = 1 AND "Like"."user_id" = 9 LIMIT 1;
+[PID 76510] [2025-02-27T06:32:52.810Z] Backoffice-API [31mERROR[39m: Error in Service Message: Missing where or truncate attribute in the options parameter of model.destroy. class: DisLikeService context: {
+  data: {
+    post_id: 1,
+    dataValues: {
+      id: 9,
+      name: 'rohit',
+      email: 'rp6568589@gmail.com',
+      password: '$2b$10$lV48cbPW3tgtbEilA8SSxe4jMul5XfN6nLTCn8zYpwEBiD0MAt8XO',
+      age: 34,
+      city: 'indore',
+      eligible: true,
+      dob: 2015-12-12T00:00:00.000Z,
+      mobile: '1212121212',
+      gender: 'female',
+      private_account: false,
+      otp: null,
+      createdAt: 2025-02-24T09:57:49.584Z,
+      updatedAt: 2025-02-24T09:57:49.584Z
+    },
+    _previousDataValues: {
+      id: 9,
+      name: 'rohit',
+      email: 'rp6568589@gmail.com',
+      password: '$2b$10$lV48cbPW3tgtbEilA8SSxe4jMul5XfN6nLTCn8zYpwEBiD0MAt8XO',
+      age: 34,
+      city: 'indore',
+      eligible: true,
+      dob: 2015-12-12T00:00:00.000Z,
+      mobile: '1212121212',
+      gender: 'female',
+      private_account: false,
+      otp: null,
+      createdAt: 2025-02-24T09:57:49.584Z,
+      updatedAt: 2025-02-24T09:57:49.584Z
+    },
+    uniqno: 1,
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: false,
+      _schema: null,
+      _schemaDelimiter: '',
+      raw: true,
+      attributes: [Array]
+    },
+    isNewRecord: false
+  },
+  traceId: '3ydSScLO_Zvl7MmJVZPTX',
+  authId: undefined
+} exceptionBacktrace: Error: Missing where or truncate attribute in the options parameter of model.destroy.
+    at Function.destroy (/home/gs/Documents/projects/social-media/backend/node_modules/sequelize/src/model.js:3034:13)
+    at DisLikeService.call (/home/gs/Documents/projects/social-media/backend/src/services/like/disLikeService.js:21:20)
+    at tryCatch (/home/gs/Documents/projects/social-media/backend/src/services/like/disLikeService.js:2:1)
+    at Generator._invoke (/home/gs/Documents/projects/social-media/backend/src/services/like/disLikeService.js:2:1)
+    at Generator.next (/home/gs/Documents/projects/social-media/backend/src/services/like/disLikeService.js:2:1)
+    at asyncGeneratorStep (/home/gs/Documents/projects/social-media/backend/src/services/like/disLikeService.js:2:1)
+    at _next (/home/gs/Documents/projects/social-media/backend/src/services/like/disLikeService.js:2:1)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5) 
+[PID 76510] [2025-02-27T06:32:52.812Z] Backoffice-API [31mERROR[39m: Error in /api/v1/like/dislike Message: Missing where or truncate attribute in the options parameter of model.destroy. context: {
+  traceId: '3ydSScLO_Zvl7MmJVZPTX',
+  query: {},
+  params: {},
+  body: { post_id: 1 }
+} 
+[PID 76510] [2025-02-27T06:32:52.844Z] Backoffice-API [32mINFO[39m: POST /api/v1/like/dislike 500 142 - 104.033 ms
+[PID 76510] [2025-02-27T06:32:52.850Z] Backoffice-API [32mINFO[39m: Shutting down server Message: Received SIGUSR2 
+[PID 76643] [2025-02-27T06:32:53.712Z] Backoffice-API [32mINFO[39m: Server Started  Message: Listening on 3000 
+[PID 76643] [2025-02-27T06:33:38.598Z] Backoffice-API [32mINFO[39m: Shutting down server Message: Received SIGUSR2 
+[PID 77175] [2025-02-27T06:33:39.520Z] Backoffice-API [32mINFO[39m: Server Started  Message: Listening on 3000 
+[PID 77175] [2025-02-27T06:33:46.549Z] Backoffice-API [32mINFO[39m: Shutting down server Message: Received SIGUSR2 
+[PID 77338] [2025-02-27T06:33:47.336Z] Backoffice-API [31mERROR[39m: uncaughtException: /home/gs/Documents/projects/social-media/backend/src/services/like/disLikeService.js: Unexpected token (23:8)
+
+[0m [90m 21 |[39m         [36mawait[39m [33mLike[39m[33m.[39mdestroy({
+ [90m 22 |[39m            where [33m:[39m 
+[31m[1m>[22m[39m[90m 23 |[39m         })[33m;[39m
+ [90m    |[39m         [31m[1m^[22m[39m
+ [90m 24 |[39m       
+ [90m 25 |[39m         [36mawait[39m post[33m.[39mdecrement([32m'like'[39m)[33m;[39m
+ [90m 26 |[39m              [0m
+SyntaxError: /home/gs/Documents/projects/social-media/backend/src/services/like/disLikeService.js: Unexpected token (23:8)
+
+[0m [90m 21 |[39m         [36mawait[39m [33mLike[39m[33m.[39mdestroy({
+ [90m 22 |[39m            where [33m:[39m 
+[31m[1m>[22m[39m[90m 23 |[39m         })[33m;[39m
+ [90m    |[39m         [31m[1m^[22m[39m
+ [90m 24 |[39m       
+ [90m 25 |[39m         [36mawait[39m post[33m.[39mdecrement([32m'like'[39m)[33m;[39m
+ [90m 26 |[39m              [0m
+    at toParseError (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parse-error.ts:95:45)
+    at Parser.raise (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/tokenizer/index.ts:1497:19)
+    at Parser.unexpected (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/tokenizer/index.ts:1537:16)
+    at Parser.parseExprAtom (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:1321:16)
+    at Parser.parseExprSubscripts (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:714:23)
+    at Parser.parseUpdate (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+    at Parser.parseMaybeUnary (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+    at Parser.parseMaybeUnaryOrPrivate (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+    at Parser.parseExprOps (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:401:23)
+    at Parser.parseMaybeConditional (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+    at Parser.parseMaybeAssign (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:298:21)
+    at callback (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:252:12)
+    at Parser.allowInAnd (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:3117:12)
+    at Parser.parseMaybeAssignAllowIn (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:251:17)
+    at Parser.parseObjectProperty (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:2271:16)
+    at Parser.parseObjPropValue (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:2327:12)
+    at Parser.parsePropertyDefinition (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:2174:17)
+    at Parser.parseObjectLike (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:2046:21)
+    at Parser.parseExprAtom (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:1159:21)
+    at Parser.parseExprSubscripts (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:714:23)
+    at Parser.parseUpdate (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+    at Parser.parseMaybeUnary (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+    at Parser.parseMaybeUnaryOrPrivate (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+    at Parser.parseExprOps (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:401:23)
+    at Parser.parseMaybeConditional (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+    at Parser.parseMaybeAssign (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:298:21)
+    at callback (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:252:12)
+    at Parser.allowInAnd (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:3117:12)
+    at Parser.parseMaybeAssignAllowIn (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:251:17)
+    at Parser.parseExprListItem (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:2720:18)
+    at Parser.parseCallExpressionArguments (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:1010:14)
+    at Parser.parseCoverCallAndAsyncArrowHead (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:888:29)
+    at Parser.parseSubscript (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:777:19)
+    at Parser.parseSubscripts (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:735:19)
+    at Parser.parseExprSubscripts (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:720:17)
+    at Parser.parseUpdate (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+    at Parser.parseMaybeUnary (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+    at Parser.parseAwait (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:2880:28)
+    at Parser.parseMaybeUnary (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:617:25)
+    at Parser.parseMaybeUnaryOrPrivate (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+    at Parser.parseExprOps (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:401:23)
+    at Parser.parseMaybeConditional (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+    at Parser.parseMaybeAssign (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:298:21)
+    at Parser.parseExpressionBase (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:221:23)
+    at callback (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:212:39)
+    at Parser.allowInAnd (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:3112:16)
+    at Parser.parseExpression (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:212:17)
+    at Parser.parseStatementContent (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/statement.ts:659:23)
+    at Parser.parseStatementLike (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/statement.ts:437:17)
+    at Parser.parseStatementListItem (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/statement.ts:386:17)
+[PID 77439] [2025-02-27T06:33:50.498Z] Backoffice-API [32mINFO[39m: Server Started  Message: Listening on 3000 
+[PID 77439] [2025-02-27T06:33:50.605Z] Backoffice-API [32mINFO[39m: Shutting down server Message: Received SIGUSR2 
+[PID 77494] [2025-02-27T06:33:51.493Z] Backoffice-API [32mINFO[39m: Server Started  Message: Listening on 3000 
+[PID 77494] [2025-02-27T06:33:54.717Z] Backoffice-API [32mINFO[39m: Executing (default): SELECT "id", "name", "email", "password", "age", "city", "eligible", "dob", "mobile", "gender", "private_account", "otp", "created_at" AS "_0", "updated_at" AS "_1" FROM "users" AS "User" WHERE "User"."id" = 9;
+========================================[Service Started: DisLikeService]========================================
+[PID 77494] [2025-02-27T06:33:54.722Z] Backoffice-API [32mINFO[39m: Executing (default): SELECT "id", "description", "location", "img_url", "like", "comment", "user_id" AS "_0", "created_at" AS "_1", "updated_at" AS "_2" FROM "posts" AS "Post" WHERE "Post"."id" = 1;
+[PID 77494] [2025-02-27T06:33:54.724Z] Backoffice-API [32mINFO[39m: Executing (default): SELECT "id", "user_id", "post_id", "created_at" AS "_0", "updated_at" AS "_1" FROM "likes" AS "Like" WHERE "Like"."post_id" = 1 AND "Like"."user_id" = 9 LIMIT 1;
+[PID 77494] [2025-02-27T06:33:54.725Z] Backoffice-API [32mINFO[39m: Executing (default): DELETE FROM "likes" WHERE "post_id" = 1 AND "user_id" = 9
+[PID 77494] [2025-02-27T06:33:54.734Z] Backoffice-API [32mINFO[39m: Executing (default): UPDATE "posts" SET "like"="like"- 1,"updated_at"='2025-02-27 06:33:54.731 +00:00' WHERE "id" = 1 RETURNING *
+========================================[Service Finished: DisLikeService]========================================
+[PID 77494] [2025-02-27T06:33:54.743Z] Backoffice-API [32mINFO[39m: POST /api/v1/like/dislike 200 60 - 77.254 ms
+[PID 77494] [2025-02-27T06:33:57.683Z] Backoffice-API [32mINFO[39m: Executing (default): SELECT "id", "name", "email", "password", "age", "city", "eligible", "dob", "mobile", "gender", "private_account", "otp", "created_at" AS "_0", "updated_at" AS "_1" FROM "users" AS "User" WHERE "User"."id" = 9;
+========================================[Service Started: DisLikeService]========================================
+[PID 77494] [2025-02-27T06:33:57.685Z] Backoffice-API [32mINFO[39m: Executing (default): SELECT "id", "description", "location", "img_url", "like", "comment", "user_id" AS "_0", "created_at" AS "_1", "updated_at" AS "_2" FROM "posts" AS "Post" WHERE "Post"."id" = 1;
+[PID 77494] [2025-02-27T06:33:57.686Z] Backoffice-API [32mINFO[39m: Executing (default): SELECT "id", "user_id", "post_id", "created_at" AS "_0", "updated_at" AS "_1" FROM "likes" AS "Like" WHERE "Like"."post_id" = 1 AND "Like"."user_id" = 9 LIMIT 1;
+========================================[Service Finished: DisLikeService]========================================
+[PID 77494] [2025-02-27T06:33:57.690Z] Backoffice-API [34mDEBUG[39m: LikeNotFoundError in /api/v1/like/dislike Message: Post Not Liked By User context: {
+  traceId: '6Q4OavyKF1jPH5iBrJC9Z',
+  query: {},
+  params: {},
+  body: { post_id: 1 }
+} 
+[PID 77494] [2025-02-27T06:33:57.695Z] Backoffice-API [32mINFO[39m: POST /api/v1/like/dislike 400 107 - 13.964 ms
+[PID 77494] [2025-02-27T06:33:57.714Z] Backoffice-API [32mINFO[39m: Shutting down server Message: Received SIGUSR2 
+[PID 77613] [2025-02-27T06:33:58.554Z] Backoffice-API [32mINFO[39m: Server Started  Message: Listening on 3000 
+[PID 77613] [2025-02-27T06:34:06.425Z] Backoffice-API [32mINFO[39m: Executing (default): SELECT "id", "name", "email", "password", "age", "city", "eligible", "dob", "mobile", "gender", "private_account", "otp", "created_at" AS "_0", "updated_at" AS "_1" FROM "users" AS "User" WHERE "User"."id" = 9;
+========================================[Service Started: LikeService]========================================
+[PID 77613] [2025-02-27T06:34:06.431Z] Backoffice-API [32mINFO[39m: Executing (default): SELECT "id", "description", "location", "img_url", "like", "comment", "user_id" AS "_0", "created_at" AS "_1", "updated_at" AS "_2" FROM "posts" AS "Post" WHERE "Post"."id" = 1;
+[PID 77613] [2025-02-27T06:34:06.432Z] Backoffice-API [32mINFO[39m: Executing (default): SELECT "id", "user_id", "post_id", "created_at" AS "_0", "updated_at" AS "_1" FROM "likes" AS "Like" WHERE "Like"."post_id" = 1 AND "Like"."user_id" = 9 LIMIT 1;
+[PID 77613] [2025-02-27T06:34:06.439Z] Backoffice-API [32mINFO[39m: Executing (default): INSERT INTO "likes" ("id","user_id","post_id","created_at","updated_at") VALUES (DEFAULT,$1,$2,$3,$4) RETURNING "id","user_id","post_id","created_at","updated_at";
+[PID 77613] [2025-02-27T06:34:06.445Z] Backoffice-API [32mINFO[39m: Executing (default): UPDATE "posts" SET "like"="like"+ 1,"updated_at"='2025-02-27 06:34:06.444 +00:00' WHERE "id" = 1 RETURNING *
+========================================[Service Finished: LikeService]========================================
+[PID 77613] [2025-02-27T06:34:06.452Z] Backoffice-API [32mINFO[39m: POST /api/v1/like/create 200 57 - 74.014 ms
+========================================[Service Started: GetUsersService]========================================
+[PID 77613] [2025-02-27T06:34:31.712Z] Backoffice-API [32mINFO[39m: Executing (default): SELECT "id", "name", "email", "password", "age", "city", "eligible", "dob", "mobile", "gender", "private_account", "otp", "created_at" AS "_0", "updated_at" AS "_1" FROM "users" AS "User";
+========================================[Service Finished: GetUsersService]========================================
+[PID 77613] [2025-02-27T06:34:31.721Z] Backoffice-API [32mINFO[39m: GET /api/v1/user/get 200 - - 21.682 ms
+[PID 77613] [2025-02-27T06:40:56.898Z] Backoffice-API [34mDEBUG[39m: RequestInputValidationError in /api/v1/auth/forget-password Message: Please check the request data context: { traceId: 'uplF69QDXSC0Up6FGsCC4', query: {}, params: {}, body: {} } fault: { body: [ 'data must have required property email' ] } 
+[PID 77613] [2025-02-27T06:40:56.899Z] Backoffice-API [32mINFO[39m: POST /api/v1/auth/forget-password 422 185 - 23.487 ms
+========================================[Service Started: NewPasswordService]========================================
+[PID 77613] [2025-02-27T06:41:31.396Z] Backoffice-API [32mINFO[39m: Executing (default): SELECT "id", "name", "email", "password", "age", "city", "eligible", "dob", "mobile", "gender", "private_account", "otp", "created_at" AS "_0", "updated_at" AS "_1" FROM "users" AS "User" WHERE "User"."email" = 'rp6568589@gmail.com';
+[PID 77613] [2025-02-27T06:41:31.463Z] Backoffice-API [32mINFO[39m: Executing (default): UPDATE "users" SET "password"=$1,"updated_at"=$2 WHERE "id" = $3
+========================================[Service Finished: NewPasswordService]========================================
+[PID 77613] [2025-02-27T06:41:36.135Z] Backoffice-API [32mINFO[39m: POST /api/v1/auth/forget-password 200 64 - 4752.253 ms
+[PID 77613] [2025-02-27T06:43:08.901Z] Backoffice-API [31mERROR[39m: TokenExpiredError: jwt expired Message: No Message 
+[PID 77613] [2025-02-27T06:43:08.902Z] Backoffice-API [32mINFO[39m: POST /api/v1/auth/reset-password 400 87 - 1.589 ms
+[PID 77613] [2025-02-27T06:44:15.455Z] Backoffice-API [32mINFO[39m: Shutting down server Message: Received SIGUSR2 
+[PID 84239] [2025-02-27T06:44:16.364Z] Backoffice-API [32mINFO[39m: Server Started  Message: Listening on 3000 
+[PID 84239] [2025-02-27T06:44:18.225Z] Backoffice-API [32mINFO[39m: Shutting down server Message: Received SIGUSR2 
+[PID 84313] [2025-02-27T06:44:19.077Z] Backoffice-API [31mERROR[39m: uncaughtException: /home/gs/Documents/projects/social-media/backend/src/rest-resources/routes/api/v1/auth.route.js: Unexpected token, expected "," (15:4)
+
+[0m [90m 13 |[39m    [33m.[39mpost(
+ [90m 14 |[39m       requestValidationMiddleware
+[31m[1m>[22m[39m[90m 15 |[39m     [33mAuthController[39m[33m.[39mlogin[33m,[39m
+ [90m    |[39m     [31m[1m^[22m[39m
+ [90m 16 |[39m     responseValidationMiddleware(loginValidation))[33m;[39m
+ [90m 17 |[39m
+ [90m 18 |[39m authRoutes[0m
+SyntaxError: /home/gs/Documents/projects/social-media/backend/src/rest-resources/routes/api/v1/auth.route.js: Unexpected token, expected "," (15:4)
+
+[0m [90m 13 |[39m    [33m.[39mpost(
+ [90m 14 |[39m       requestValidationMiddleware
+[31m[1m>[22m[39m[90m 15 |[39m     [33mAuthController[39m[33m.[39mlogin[33m,[39m
+ [90m    |[39m     [31m[1m^[22m[39m
+ [90m 16 |[39m     responseValidationMiddleware(loginValidation))[33m;[39m
+ [90m 17 |[39m
+ [90m 18 |[39m authRoutes[0m
+    at toParseError (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parse-error.ts:95:45)
+    at Parser.raise (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/tokenizer/index.ts:1497:19)
+    at Parser.unexpected (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/tokenizer/index.ts:1537:16)
+    at Parser.expect (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/util.ts:157:12)
+    at Parser.parseCallExpressionArguments (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:999:14)
+    at Parser.parseCoverCallAndAsyncArrowHead (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:888:29)
+    at Parser.parseSubscript (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:777:19)
+    at Parser.parseSubscripts (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:735:19)
+    at Parser.parseExprSubscripts (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:720:17)
+    at Parser.parseUpdate (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+    at Parser.parseMaybeUnary (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+    at Parser.parseMaybeUnaryOrPrivate (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+    at Parser.parseExprOps (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:401:23)
+    at Parser.parseMaybeConditional (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+    at Parser.parseMaybeAssign (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:298:21)
+    at Parser.parseExpressionBase (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:221:23)
+    at callback (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:212:39)
+    at Parser.allowInAnd (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:3112:16)
+    at Parser.parseExpression (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:212:17)
+    at Parser.parseStatementContent (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/statement.ts:659:23)
+    at Parser.parseStatementLike (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/statement.ts:437:17)
+    at Parser.parseModuleItem (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/statement.ts:374:17)
+    at Parser.parseBlockOrModuleBlockBody (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/statement.ts:1419:16)
+    at Parser.parseBlockBody (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/statement.ts:1393:10)
+    at Parser.parseProgram (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/statement.ts:225:10)
+    at Parser.parseTopLevel (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/statement.ts:203:25)
+    at Parser.parse (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/index.ts:90:10)
+    at parse (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/index.ts:92:38)
+    at parser (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/core/src/parser/index.ts:28:19)
+    at parser.next (<anonymous>)
+    at normalizeFile (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/core/src/transformation/normalize-file.ts:49:24)
+    at normalizeFile.next (<anonymous>)
+    at run (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/core/src/transformation/index.ts:40:36)
+    at run.next (<anonymous>)
+    at transform (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/core/src/transform.ts:29:20)
+    at transform.next (<anonymous>)
+    at evaluateSync (/home/gs/Documents/projects/social-media/backend/node_modules/gensync/index.js:251:28)
+    at fn (/home/gs/Documents/projects/social-media/backend/node_modules/gensync/index.js:89:14)
+    at stopHiding - secret - don't use this - v1 (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/core/src/errors/rewrite-stack-trace.ts:99:14)
+    at Object.transformSync (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/core/src/transform.ts:66:52)
+    at transformSync (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/register/src/worker/transform.js:94:33)
+    at Function.call (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/register/src/worker/handle-message.js:15:16)
+    at LocalClient.call (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/register/src/worker-client.js:103:42)
+    at LocalClient.transform (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/register/src/worker-client.js:40:22)
+    at compile (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/register/src/hook.js:59:25)
+    at compileBabel7 (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/register/src/hook.js:50:14)
+    at Module._compile (/home/gs/Documents/projects/social-media/backend/node_modules/pirates/lib/index.js:113:29)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.newLoader [as .js] (/home/gs/Documents/projects/social-media/backend/node_modules/pirates/lib/index.js:121:7)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+[PID 84353] [2025-02-27T06:44:21.533Z] Backoffice-API [31mERROR[39m: uncaughtException: /home/gs/Documents/projects/social-media/backend/src/rest-resources/routes/api/v1/auth.route.js: Unexpected token, expected "," (15:4)
+
+[0m [90m 13 |[39m    [33m.[39mpost(
+ [90m 14 |[39m       requestValidationMiddleware(login)
+[31m[1m>[22m[39m[90m 15 |[39m     [33mAuthController[39m[33m.[39mlogin[33m,[39m
+ [90m    |[39m     [31m[1m^[22m[39m
+ [90m 16 |[39m     responseValidationMiddleware(loginValidation))[33m;[39m
+ [90m 17 |[39m
+ [90m 18 |[39m authRoutes[0m
+SyntaxError: /home/gs/Documents/projects/social-media/backend/src/rest-resources/routes/api/v1/auth.route.js: Unexpected token, expected "," (15:4)
+
+[0m [90m 13 |[39m    [33m.[39mpost(
+ [90m 14 |[39m       requestValidationMiddleware(login)
+[31m[1m>[22m[39m[90m 15 |[39m     [33mAuthController[39m[33m.[39mlogin[33m,[39m
+ [90m    |[39m     [31m[1m^[22m[39m
+ [90m 16 |[39m     responseValidationMiddleware(loginValidation))[33m;[39m
+ [90m 17 |[39m
+ [90m 18 |[39m authRoutes[0m
+    at toParseError (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parse-error.ts:95:45)
+    at Parser.raise (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/tokenizer/index.ts:1497:19)
+    at Parser.unexpected (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/tokenizer/index.ts:1537:16)
+    at Parser.expect (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/util.ts:157:12)
+    at Parser.parseCallExpressionArguments (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:999:14)
+    at Parser.parseCoverCallAndAsyncArrowHead (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:888:29)
+    at Parser.parseSubscript (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:777:19)
+    at Parser.parseSubscripts (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:735:19)
+    at Parser.parseExprSubscripts (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:720:17)
+    at Parser.parseUpdate (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+    at Parser.parseMaybeUnary (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+    at Parser.parseMaybeUnaryOrPrivate (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+    at Parser.parseExprOps (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:401:23)
+    at Parser.parseMaybeConditional (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+    at Parser.parseMaybeAssign (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:298:21)
+    at Parser.parseExpressionBase (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:221:23)
+    at callback (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:212:39)
+    at Parser.allowInAnd (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:3112:16)
+    at Parser.parseExpression (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:212:17)
+    at Parser.parseStatementContent (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/statement.ts:659:23)
+    at Parser.parseStatementLike (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/statement.ts:437:17)
+    at Parser.parseModuleItem (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/statement.ts:374:17)
+    at Parser.parseBlockOrModuleBlockBody (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/statement.ts:1419:16)
+    at Parser.parseBlockBody (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/statement.ts:1393:10)
+    at Parser.parseProgram (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/statement.ts:225:10)
+    at Parser.parseTopLevel (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/statement.ts:203:25)
+    at Parser.parse (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/index.ts:90:10)
+    at parse (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/index.ts:92:38)
+    at parser (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/core/src/parser/index.ts:28:19)
+    at parser.next (<anonymous>)
+    at normalizeFile (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/core/src/transformation/normalize-file.ts:49:24)
+    at normalizeFile.next (<anonymous>)
+    at run (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/core/src/transformation/index.ts:40:36)
+    at run.next (<anonymous>)
+    at transform (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/core/src/transform.ts:29:20)
+    at transform.next (<anonymous>)
+    at evaluateSync (/home/gs/Documents/projects/social-media/backend/node_modules/gensync/index.js:251:28)
+    at fn (/home/gs/Documents/projects/social-media/backend/node_modules/gensync/index.js:89:14)
+    at stopHiding - secret - don't use this - v1 (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/core/src/errors/rewrite-stack-trace.ts:99:14)
+    at Object.transformSync (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/core/src/transform.ts:66:52)
+    at transformSync (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/register/src/worker/transform.js:94:33)
+    at Function.call (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/register/src/worker/handle-message.js:15:16)
+    at LocalClient.call (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/register/src/worker-client.js:103:42)
+    at LocalClient.transform (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/register/src/worker-client.js:40:22)
+    at compile (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/register/src/hook.js:59:25)
+    at compileBabel7 (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/register/src/hook.js:50:14)
+    at Module._compile (/home/gs/Documents/projects/social-media/backend/node_modules/pirates/lib/index.js:113:29)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.newLoader [as .js] (/home/gs/Documents/projects/social-media/backend/node_modules/pirates/lib/index.js:121:7)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+[PID 84450] [2025-02-27T06:44:23.308Z] Backoffice-API [31mERROR[39m: uncaughtException: /home/gs/Documents/projects/social-media/backend/src/rest-resources/routes/api/v1/auth.route.js: Unexpected token, expected "," (15:4)
+
+[0m [90m 13 |[39m    [33m.[39mpost(
+ [90m 14 |[39m       requestValidationMiddleware(loginValidation)
+[31m[1m>[22m[39m[90m 15 |[39m     [33mAuthController[39m[33m.[39mlogin[33m,[39m
+ [90m    |[39m     [31m[1m^[22m[39m
+ [90m 16 |[39m     responseValidationMiddleware(loginValidation))[33m;[39m
+ [90m 17 |[39m
+ [90m 18 |[39m authRoutes[0m
+SyntaxError: /home/gs/Documents/projects/social-media/backend/src/rest-resources/routes/api/v1/auth.route.js: Unexpected token, expected "," (15:4)
+
+[0m [90m 13 |[39m    [33m.[39mpost(
+ [90m 14 |[39m       requestValidationMiddleware(loginValidation)
+[31m[1m>[22m[39m[90m 15 |[39m     [33mAuthController[39m[33m.[39mlogin[33m,[39m
+ [90m    |[39m     [31m[1m^[22m[39m
+ [90m 16 |[39m     responseValidationMiddleware(loginValidation))[33m;[39m
+ [90m 17 |[39m
+ [90m 18 |[39m authRoutes[0m
+    at toParseError (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parse-error.ts:95:45)
+    at Parser.raise (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/tokenizer/index.ts:1497:19)
+    at Parser.unexpected (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/tokenizer/index.ts:1537:16)
+    at Parser.expect (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/util.ts:157:12)
+    at Parser.parseCallExpressionArguments (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:999:14)
+    at Parser.parseCoverCallAndAsyncArrowHead (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:888:29)
+    at Parser.parseSubscript (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:777:19)
+    at Parser.parseSubscripts (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:735:19)
+    at Parser.parseExprSubscripts (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:720:17)
+    at Parser.parseUpdate (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+    at Parser.parseMaybeUnary (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+    at Parser.parseMaybeUnaryOrPrivate (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+    at Parser.parseExprOps (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:401:23)
+    at Parser.parseMaybeConditional (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+    at Parser.parseMaybeAssign (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:298:21)
+    at Parser.parseExpressionBase (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:221:23)
+    at callback (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:212:39)
+    at Parser.allowInAnd (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:3112:16)
+    at Parser.parseExpression (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:212:17)
+    at Parser.parseStatementContent (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/statement.ts:659:23)
+    at Parser.parseStatementLike (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/statement.ts:437:17)
+    at Parser.parseModuleItem (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/statement.ts:374:17)
+    at Parser.parseBlockOrModuleBlockBody (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/statement.ts:1419:16)
+    at Parser.parseBlockBody (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/statement.ts:1393:10)
+    at Parser.parseProgram (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/statement.ts:225:10)
+    at Parser.parseTopLevel (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/statement.ts:203:25)
+    at Parser.parse (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/index.ts:90:10)
+    at parse (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/index.ts:92:38)
+    at parser (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/core/src/parser/index.ts:28:19)
+    at parser.next (<anonymous>)
+    at normalizeFile (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/core/src/transformation/normalize-file.ts:49:24)
+    at normalizeFile.next (<anonymous>)
+    at run (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/core/src/transformation/index.ts:40:36)
+    at run.next (<anonymous>)
+    at transform (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/core/src/transform.ts:29:20)
+    at transform.next (<anonymous>)
+    at evaluateSync (/home/gs/Documents/projects/social-media/backend/node_modules/gensync/index.js:251:28)
+    at fn (/home/gs/Documents/projects/social-media/backend/node_modules/gensync/index.js:89:14)
+    at stopHiding - secret - don't use this - v1 (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/core/src/errors/rewrite-stack-trace.ts:99:14)
+    at Object.transformSync (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/core/src/transform.ts:66:52)
+    at transformSync (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/register/src/worker/transform.js:94:33)
+    at Function.call (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/register/src/worker/handle-message.js:15:16)
+    at LocalClient.call (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/register/src/worker-client.js:103:42)
+    at LocalClient.transform (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/register/src/worker-client.js:40:22)
+    at compile (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/register/src/hook.js:59:25)
+    at compileBabel7 (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/register/src/hook.js:50:14)
+    at Module._compile (/home/gs/Documents/projects/social-media/backend/node_modules/pirates/lib/index.js:113:29)
+    at node:internal/modules/cjs/loader:1689:10
+    at Object.newLoader [as .js] (/home/gs/Documents/projects/social-media/backend/node_modules/pirates/lib/index.js:121:7)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+[PID 84520] [2025-02-27T06:44:26.497Z] Backoffice-API [32mINFO[39m: Server Started  Message: Listening on 3000 
+[PID 84520] [2025-02-27T06:45:03.653Z] Backoffice-API [32mINFO[39m: Shutting down server Message: Received SIGUSR2 
+[PID 84990] [2025-02-27T06:45:04.533Z] Backoffice-API [32mINFO[39m: Server Started  Message: Listening on 3000 
+[PID 84990] [2025-02-27T06:45:04.984Z] Backoffice-API [32mINFO[39m: Shutting down server Message: Received SIGUSR2 
+[PID 85048] [2025-02-27T06:45:05.802Z] Backoffice-API [32mINFO[39m: Server Started  Message: Listening on 3000 
+[PID 85048] [2025-02-27T06:45:15.395Z] Backoffice-API [32mINFO[39m: Shutting down server Message: Received SIGUSR2 
+[PID 85232] [2025-02-27T06:45:16.265Z] Backoffice-API [32mINFO[39m: Server Started  Message: Listening on 3000 
+[PID 85232] [2025-02-27T06:45:16.900Z] Backoffice-API [32mINFO[39m: Shutting down server Message: Received SIGUSR2 
+[PID 85285] [2025-02-27T06:45:17.733Z] Backoffice-API [32mINFO[39m: Server Started  Message: Listening on 3000 
+[PID 85285] [2025-02-27T06:45:21.302Z] Backoffice-API [32mINFO[39m: Shutting down server Message: Received SIGUSR2 
+[PID 85359] [2025-02-27T06:45:22.087Z] Backoffice-API [32mINFO[39m: Server Started  Message: Listening on 3000 
+[PID 85359] [2025-02-27T06:45:26.955Z] Backoffice-API [34mDEBUG[39m: RequestInputValidationError in /api/v1/auth/login Message: Please check the request data context: {
+  traceId: 'CMr4kr_1re7NbzfPpUZar',
+  query: {},
+  params: {},
+  body: { email: 'rp6568589@gmail.com', password: '12345' }
+} fault: {
+  body: [
+    'data/password must NOT be shorter than 8 characters',
+    'data/password must match pattern "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]+$"'
+  ]
+} 
+[PID 85359] [2025-02-27T06:45:26.959Z] Backoffice-API [32mINFO[39m: POST /api/v1/auth/login 422 297 - 10.596 ms
+[PID 85359] [2025-02-27T06:46:04.261Z] Backoffice-API [34mDEBUG[39m: RequestInputValidationError in /api/v1/auth/login Message: Please check the request data context: {
+  traceId: 'YLJptSfokd_gDQO7_Gn9d',
+  query: {},
+  params: {},
+  body: { email: 'rp6568589@gmail.com', password: 'OOpZtnmq' }
+} fault: {
+  body: [
+    'data/password must match pattern "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]+$"'
+  ]
+} 
+[PID 85359] [2025-02-27T06:46:04.262Z] Backoffice-API [32mINFO[39m: POST /api/v1/auth/login 422 243 - 2.721 ms
+[PID 85359] [2025-02-27T06:46:29.730Z] Backoffice-API [32mINFO[39m: Shutting down server Message: Received SIGUSR2 
+[PID 86245] [2025-02-27T06:46:30.539Z] Backoffice-API [32mINFO[39m: Server Started  Message: Listening on 3000 
+========================================[Service Started: LoginService]========================================
+[PID 86245] [2025-02-27T06:46:33.078Z] Backoffice-API [32mINFO[39m: Executing (default): SELECT "id", "name", "email", "password", "age", "city", "eligible", "dob", "mobile", "gender", "private_account", "otp", "created_at" AS "_0", "updated_at" AS "_1" FROM "users" AS "User" WHERE "User"."email" = 'rp6568589@gmail.com';
+========================================[Service Finished: LoginService]========================================
+[PID 86245] [2025-02-27T06:46:33.151Z] Backoffice-API [32mINFO[39m: POST /api/v1/auth/login 200 932 - 114.999 ms
+[PID 86245] [2025-02-27T06:55:10.691Z] Backoffice-API [31mERROR[39m: TokenExpiredError: jwt expired Message: No Message 
+[PID 86245] [2025-02-27T06:55:10.693Z] Backoffice-API [32mINFO[39m: POST /api/v1/auth/reset-password 400 87 - 3.622 ms
+[PID 86245] [2025-02-27T06:55:40.447Z] Backoffice-API [32mINFO[39m: Executing (default): SELECT "id", "name", "email", "password", "age", "city", "eligible", "dob", "mobile", "gender", "private_account", "otp", "created_at" AS "_0", "updated_at" AS "_1" FROM "users" AS "User" WHERE "User"."id" = 9;
+[PID 86245] [2025-02-27T06:55:40.464Z] Backoffice-API [34mDEBUG[39m: RequestInputValidationError in /api/v1/auth/reset-password Message: Please check the request data context: { traceId: 'N_lUKQt6haQET7t5H2BCJ', query: {}, params: {}, body: {} } fault: {
+  body: [
+    'data must have required property old_password',
+    'data must have required property new_password'
+  ]
+} 
+[PID 86245] [2025-02-27T06:55:40.467Z] Backoffice-API [32mINFO[39m: POST /api/v1/auth/reset-password 422 240 - 31.274 ms
+[PID 86245] [2025-02-27T06:57:51.545Z] Backoffice-API [32mINFO[39m: Shutting down server Message: Received SIGUSR2 
+[PID 93360] [2025-02-27T06:57:52.535Z] Backoffice-API [31mERROR[39m: uncaughtException: /home/gs/Documents/projects/social-media/backend/src/rest-resources/validations/auth.validation.js: Unexpected token, expected "," (65:6)
+
+[0m [90m 63 |[39m           }
+ [90m 64 |[39m           
+[31m[1m>[22m[39m[90m 65 |[39m       old_password[33m:[39m { type[33m:[39m [32m"string"[39m }[33m,[39m
+ [90m    |[39m       [31m[1m^[22m[39m
+ [90m 66 |[39m       new_password[33m:[39m { type[33m:[39m [32m"string"[39m }[33m,[39m
+ [90m 67 |[39m     }[33m,[39m
+ [90m 68 |[39m     required[33m:[39m [[32m"old_password"[39m[33m,[39m [32m"new_password"[39m][33m,[39m[0m
+SyntaxError: /home/gs/Documents/projects/social-media/backend/src/rest-resources/validations/auth.validation.js: Unexpected token, expected "," (65:6)
+
+[0m [90m 63 |[39m           }
+ [90m 64 |[39m           
+[31m[1m>[22m[39m[90m 65 |[39m       old_password[33m:[39m { type[33m:[39m [32m"string"[39m }[33m,[39m
+ [90m    |[39m       [31m[1m^[22m[39m
+ [90m 66 |[39m       new_password[33m:[39m { type[33m:[39m [32m"string"[39m }[33m,[39m
+ [90m 67 |[39m     }[33m,[39m
+ [90m 68 |[39m     required[33m:[39m [[32m"old_password"[39m[33m,[39m [32m"new_password"[39m][33m,[39m[0m
+    at toParseError (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parse-error.ts:95:45)
+    at Parser.raise (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/tokenizer/index.ts:1497:19)
+    at Parser.unexpected (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/tokenizer/index.ts:1537:16)
+    at Parser.expect (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/util.ts:157:12)
+    at Parser.parseObjectLike (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:2035:14)
+    at Parser.parseExprAtom (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:1159:21)
+    at Parser.parseExprSubscripts (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:714:23)
+    at Parser.parseUpdate (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+    at Parser.parseMaybeUnary (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+    at Parser.parseMaybeUnaryOrPrivate (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+    at Parser.parseExprOps (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:401:23)
+    at Parser.parseMaybeConditional (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+    at Parser.parseMaybeAssign (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:298:21)
+    at callback (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:252:12)
+    at Parser.allowInAnd (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:3117:12)
+    at Parser.parseMaybeAssignAllowIn (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:251:17)
+    at Parser.parseObjectProperty (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:2271:16)
+    at Parser.parseObjPropValue (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:2327:12)
+    at Parser.parsePropertyDefinition (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:2174:17)
+    at Parser.parseObjectLike (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:2046:21)
+    at Parser.parseExprAtom (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:1159:21)
+    at Parser.parseExprSubscripts (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:714:23)
+    at Parser.parseUpdate (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+    at Parser.parseMaybeUnary (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+    at Parser.parseMaybeUnaryOrPrivate (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+    at Parser.parseExprOps (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:401:23)
+    at Parser.parseMaybeConditional (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+    at Parser.parseMaybeAssign (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:298:21)
+    at callback (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:252:12)
+    at Parser.allowInAnd (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:3117:12)
+    at Parser.parseMaybeAssignAllowIn (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:251:17)
+    at Parser.parseObjectProperty (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:2271:16)
+    at Parser.parseObjPropValue (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:2327:12)
+    at Parser.parsePropertyDefinition (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:2174:17)
+    at Parser.parseObjectLike (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:2046:21)
+    at Parser.parseExprAtom (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:1159:21)
+    at Parser.parseExprSubscripts (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:714:23)
+    at Parser.parseUpdate (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+    at Parser.parseMaybeUnary (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+    at Parser.parseMaybeUnaryOrPrivate (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+    at Parser.parseExprOps (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:401:23)
+    at Parser.parseMaybeConditional (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+    at Parser.parseMaybeAssign (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:298:21)
+    at callback (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:252:12)
+    at Parser.allowInAnd (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:3112:16)
+    at Parser.parseMaybeAssignAllowIn (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:251:17)
+    at Parser.parseVar (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/statement.ts:1563:18)
+    at Parser.parseVarStatement (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/statement.ts:1227:10)
+    at Parser.parseStatementContent (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/statement.ts:566:21)
+    at Parser.parseStatementLike (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/statement.ts:437:17)
+[PID 93465] [2025-02-27T06:57:56.526Z] Backoffice-API [31mERROR[39m: uncaughtException: /home/gs/Documents/projects/social-media/backend/src/rest-resources/validations/auth.validation.js: Unexpected token, expected "," (68:6)
+
+[0m [90m 66 |[39m             minLength[33m:[39m [35m8[39m
+ [90m 67 |[39m           }
+[31m[1m>[22m[39m[90m 68 |[39m       old_password[33m:[39m { type[33m:[39m [32m"string"[39m }[33m,[39m
+ [90m    |[39m       [31m[1m^[22m[39m
+ [90m 69 |[39m       new_password[33m:[39m { type[33m:[39m [32m"string"[39m }[33m,[39m
+ [90m 70 |[39m     }[33m,[39m
+ [90m 71 |[39m     required[33m:[39m [[32m"old_password"[39m[33m,[39m [32m"new_password"[39m][33m,[39m[0m
+SyntaxError: /home/gs/Documents/projects/social-media/backend/src/rest-resources/validations/auth.validation.js: Unexpected token, expected "," (68:6)
+
+[0m [90m 66 |[39m             minLength[33m:[39m [35m8[39m
+ [90m 67 |[39m           }
+[31m[1m>[22m[39m[90m 68 |[39m       old_password[33m:[39m { type[33m:[39m [32m"string"[39m }[33m,[39m
+ [90m    |[39m       [31m[1m^[22m[39m
+ [90m 69 |[39m       new_password[33m:[39m { type[33m:[39m [32m"string"[39m }[33m,[39m
+ [90m 70 |[39m     }[33m,[39m
+ [90m 71 |[39m     required[33m:[39m [[32m"old_password"[39m[33m,[39m [32m"new_password"[39m][33m,[39m[0m
+    at toParseError (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parse-error.ts:95:45)
+    at Parser.raise (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/tokenizer/index.ts:1497:19)
+    at Parser.unexpected (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/tokenizer/index.ts:1537:16)
+    at Parser.expect (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/util.ts:157:12)
+    at Parser.parseObjectLike (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:2035:14)
+    at Parser.parseExprAtom (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:1159:21)
+    at Parser.parseExprSubscripts (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:714:23)
+    at Parser.parseUpdate (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+    at Parser.parseMaybeUnary (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+    at Parser.parseMaybeUnaryOrPrivate (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+    at Parser.parseExprOps (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:401:23)
+    at Parser.parseMaybeConditional (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+    at Parser.parseMaybeAssign (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:298:21)
+    at callback (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:252:12)
+    at Parser.allowInAnd (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:3117:12)
+    at Parser.parseMaybeAssignAllowIn (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:251:17)
+    at Parser.parseObjectProperty (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:2271:16)
+    at Parser.parseObjPropValue (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:2327:12)
+    at Parser.parsePropertyDefinition (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:2174:17)
+    at Parser.parseObjectLike (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:2046:21)
+    at Parser.parseExprAtom (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:1159:21)
+    at Parser.parseExprSubscripts (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:714:23)
+    at Parser.parseUpdate (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+    at Parser.parseMaybeUnary (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+    at Parser.parseMaybeUnaryOrPrivate (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+    at Parser.parseExprOps (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:401:23)
+    at Parser.parseMaybeConditional (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+    at Parser.parseMaybeAssign (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:298:21)
+    at callback (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:252:12)
+    at Parser.allowInAnd (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:3117:12)
+    at Parser.parseMaybeAssignAllowIn (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:251:17)
+    at Parser.parseObjectProperty (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:2271:16)
+    at Parser.parseObjPropValue (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:2327:12)
+    at Parser.parsePropertyDefinition (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:2174:17)
+    at Parser.parseObjectLike (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:2046:21)
+    at Parser.parseExprAtom (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:1159:21)
+    at Parser.parseExprSubscripts (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:714:23)
+    at Parser.parseUpdate (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:693:21)
+    at Parser.parseMaybeUnary (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:655:23)
+    at Parser.parseMaybeUnaryOrPrivate (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:389:14)
+    at Parser.parseExprOps (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:401:23)
+    at Parser.parseMaybeConditional (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:356:23)
+    at Parser.parseMaybeAssign (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:298:21)
+    at callback (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:252:12)
+    at Parser.allowInAnd (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:3112:16)
+    at Parser.parseMaybeAssignAllowIn (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/expression.ts:251:17)
+    at Parser.parseVar (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/statement.ts:1563:18)
+    at Parser.parseVarStatement (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/statement.ts:1227:10)
+    at Parser.parseStatementContent (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/statement.ts:566:21)
+    at Parser.parseStatementLike (/home/gs/Documents/projects/social-media/backend/node_modules/@babel/parser/src/parser/statement.ts:437:17)
+[PID 93576] [2025-02-27T06:58:00.250Z] Backoffice-API [32mINFO[39m: Server Started  Message: Listening on 3000 
+[PID 93576] [2025-02-27T06:58:02.557Z] Backoffice-API [32mINFO[39m: Shutting down server Message: Received SIGUSR2 
+[PID 93642] [2025-02-27T06:58:03.532Z] Backoffice-API [32mINFO[39m: Server Started  Message: Listening on 3000 
+[PID 93642] [2025-02-27T06:58:05.538Z] Backoffice-API [32mINFO[39m: Shutting down server Message: Received SIGUSR2 
+[PID 93696] [2025-02-27T06:58:06.468Z] Backoffice-API [32mINFO[39m: Server Started  Message: Listening on 3000 
+[PID 93696] [2025-02-27T06:58:09.087Z] Backoffice-API [32mINFO[39m: Shutting down server Message: Received SIGUSR2 
+[PID 93800] [2025-02-27T06:58:09.971Z] Backoffice-API [32mINFO[39m: Server Started  Message: Listening on 3000 
+[PID 93800] [2025-02-27T06:58:13.701Z] Backoffice-API [32mINFO[39m: Shutting down server Message: Received SIGUSR2 
+[PID 93907] [2025-02-27T06:58:14.652Z] Backoffice-API [32mINFO[39m: Server Started  Message: Listening on 3000 
+[PID 93907] [2025-02-27T06:58:16.745Z] Backoffice-API [32mINFO[39m: Executing (default): SELECT "id", "name", "email", "password", "age", "city", "eligible", "dob", "mobile", "gender", "private_account", "otp", "created_at" AS "_0", "updated_at" AS "_1" FROM "users" AS "User" WHERE "User"."id" = 9;
+========================================[Service Started: ResetPasswordService]========================================
+========================================[Service Finished: ResetPasswordService]========================================
+[PID 93907] [2025-02-27T06:58:16.753Z] Backoffice-API [31mERROR[39m: undefined in /api/v1/auth/reset-password Message: No Message context: {
+  traceId: '1gfuV1J6Jo5onmKc9hImR',
+  query: {},
+  params: {},
+  body: { old_password: 'OOpZtnmq', new_password: 'action@1234' }
+} 
+[PID 93907] [2025-02-27T06:58:16.764Z] Backoffice-API [32mINFO[39m: POST /api/v1/auth/reset-password 500 142 - 72.412 ms
+[PID 93907] [2025-02-27T06:58:16.783Z] Backoffice-API [32mINFO[39m: Shutting down server Message: Received SIGUSR2 
+[PID 93988] [2025-02-27T06:58:17.808Z] Backoffice-API [32mINFO[39m: Server Started  Message: Listening on 3000 
+[PID 93988] [2025-02-27T06:59:08.952Z] Backoffice-API [32mINFO[39m: Shutting down server Message: Received SIGUSR2 
+[PID 94643] [2025-02-27T06:59:10.609Z] Backoffice-API [32mINFO[39m: Server Started  Message: Listening on 3000 
+[PID 94643] [2025-02-27T06:59:25.211Z] Backoffice-API [32mINFO[39m: Shutting down server Message: Received SIGUSR2 
+[PID 94891] [2025-02-27T06:59:26.257Z] Backoffice-API [32mINFO[39m: Server Started  Message: Listening on 3000 
+[PID 94891] [2025-02-27T06:59:31.119Z] Backoffice-API [32mINFO[39m: Shutting down server Message: Received SIGUSR2 
+[PID 95032] [2025-02-27T06:59:32.233Z] Backoffice-API [32mINFO[39m: Server Started  Message: Listening on 3000 
+[PID 95032] [2025-02-27T06:59:33.368Z] Backoffice-API [32mINFO[39m: Shutting down server Message: Received SIGUSR2 
+[PID 95108] [2025-02-27T06:59:34.359Z] Backoffice-API [32mINFO[39m: Server Started  Message: Listening on 3000 
+[PID 95108] [2025-02-27T06:59:44.805Z] Backoffice-API [32mINFO[39m: Executing (default): SELECT "id", "name", "email", "password", "age", "city", "eligible", "dob", "mobile", "gender", "private_account", "otp", "created_at" AS "_0", "updated_at" AS "_1" FROM "users" AS "User" WHERE "User"."id" = 9;
+========================================[Service Started: ResetPasswordService]========================================
+[PID 95108] [2025-02-27T06:59:44.812Z] Backoffice-API [32mINFO[39m: Executing (default): SELECT "id", "name", "email", "password", "age", "city", "eligible", "dob", "mobile", "gender", "private_account", "otp", "created_at" AS "_0", "updated_at" AS "_1" FROM "users" AS "User" WHERE "User"."id" = 9;
+[PID 95108] [2025-02-27T06:59:44.937Z] Backoffice-API [32mINFO[39m: Executing (default): UPDATE "users" SET "password"=$1,"updated_at"=$2 WHERE "id" = $3
+========================================[Service Finished: ResetPasswordService]========================================
+[PID 95108] [2025-02-27T06:59:44.945Z] Backoffice-API [32mINFO[39m: POST /api/v1/auth/reset-password 200 64 - 186.753 ms
+========================================[Service Started: LoginService]========================================
+[PID 95108] [2025-02-27T06:59:58.562Z] Backoffice-API [32mINFO[39m: Executing (default): SELECT "id", "name", "email", "password", "age", "city", "eligible", "dob", "mobile", "gender", "private_account", "otp", "created_at" AS "_0", "updated_at" AS "_1" FROM "users" AS "User" WHERE "User"."email" = 'rp6568589@gmail.com';
+========================================[Service Finished: LoginService]========================================
+[PID 95108] [2025-02-27T06:59:58.627Z] Backoffice-API [32mINFO[39m: POST /api/v1/auth/login 200 932 - 81.154 ms
+========================================[Service Started: GetUsersService]========================================
+[PID 95108] [2025-02-27T07:00:09.261Z] Backoffice-API [32mINFO[39m: Executing (default): SELECT "id", "name", "email", "password", "age", "city", "eligible", "dob", "mobile", "gender", "private_account", "otp", "created_at" AS "_0", "updated_at" AS "_1" FROM "users" AS "User";
+========================================[Service Finished: GetUsersService]========================================
+[PID 95108] [2025-02-27T07:00:09.273Z] Backoffice-API [32mINFO[39m: GET /api/v1/user/get 200 - - 20.206 ms
+[PID 95108] [2025-02-27T07:00:26.610Z] Backoffice-API [32mINFO[39m: Shutting down server Message: Received SIGINT 

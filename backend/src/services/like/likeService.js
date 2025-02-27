@@ -10,54 +10,26 @@ export class LikeService extends ServiceBase {
             dbModels: {Like,Post},
         } = this.context;
 
-        const {userId,postId} = this.args;
+        const {post_id,dataValues:authUser} = this.args;
 
-        const like = await Like.findAll({
-                where : {
-                    postId : postId,
-                    userId : userId
-                }
-        })
-         
-        const post = await Post.findByPk(postId); 
+        const post = await Post.findByPk(post_id);
+    
+        if(!post) return this.addError("PostDoesNotExits");
+
+        const like = await Like.findOne({
+              where : {post_id : post_id,user_id: authUser.id}
+        });
         
-        if(like.length ===  0 ){
-            
-            await Post.update(
-                 { like : post.like + 1 },
-                 {
-                    where : {
-                        id : postId
-                    }
-                 }
-            )
-
-            const like = await Like.create({
-                postId : postId,
-                userId : userId
-            })
-         
-            return { message: "Post like Successful " };
-        } else {
-              
-            await Post.update(
-                { like : post.like - 1 },
-                {
-                   where : {
-                       id : postId
-                   }
-                }
-           ) 
-
-           await Like.destroy({
-                where : {
-                     postId : postId,
-                     userId : userId
-                }
-           })
-
-            return { message : "Post DisLike Successful " };
-        }
+        if(like) return this.addError('AlreadyLikedError');
+        
+        await Like.create({
+            post_id : post_id,
+            user_id : authUser.id
+        });
+      
+        await post.increment('like');
+             
+        return {message : 'Post like successfully'}
 
     }
 

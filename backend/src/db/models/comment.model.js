@@ -15,36 +15,37 @@ export default (Sequelize, DataTypes) => {
         allowNull : false,
         allowNull:false
       },
-      postId: {
+      like: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        defaultValue: 0,
+      },
+      comment: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        defaultValue: 0,
+      },
+      post_id: {
         type: DataTypes.INTEGER,
         references: {
-          
-          model: "Posts",
+          model: "posts",
           key: "id",
         },
         onUpdate: "CASCADE",
         onDelete: "CASCADE",
       },
-      userId: {
+      user_id: {
         type: DataTypes.INTEGER,
         references: {
-          model: "Users",
+          model: "users",
           key: "id",
         },
         onUpdate: "CASCADE",
         onDelete: "CASCADE",
-      },
-      createdAt: {
-        allowNull: false,
-        type: DataTypes.DATE,
-      },
-      updatedAt: {
-        allowNull: false,
-        type: DataTypes.DATE,
-      },
+      }
     },
     {
-      tableName: "Comments",
+      tableName: "comments",
       timestamps: true,
     });
 

@@ -1,13 +1,21 @@
 import express from 'express';
-import apiRouter from "./api/index.js";
+import { Logger } from '../../libs/logger';
+import { healthCheck } from '../../libs/onHealthCheck';
 import { contextMiddleware } from '../middlewares/context.middleware.js';
+import { apiRouter } from './api';
 
-const router = express.Router();
+const routes = express.Router();
 
-router.use('/api',contextMiddleware(),apiRouter);
-router.get('/health-check',(req,res)=>{
-      console.log('okkk ')
-    return res.send();
-})
+routes.use('/api', contextMiddleware(false), apiRouter);
 
-export default router;
+routes.get('/health-check', async (_, res) => {
+  try {
+    const response = await healthCheck();
+    res.json(response);
+  } catch (error) {
+    Logger.error(error);
+    res.status(503).send();
+  }
+}); 
+
+export { routes };

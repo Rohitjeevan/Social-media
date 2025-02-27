@@ -8,7 +8,7 @@ export class PostController {
   static async createPost(req,res,next) {
     try {
       const { result, successful, errors } = await CreatePostService.execute(
-        req.body,
+        {...req.body,...req.authUser},
         {
           ...req.context,
         }

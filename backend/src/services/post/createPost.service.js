@@ -5,15 +5,15 @@ export class CreatePostService extends ServiceBase {
     const {
       dbModels: { Post },
     } = this.context;
-    const { description,location, image_url, like, comment, userId } = this.args;
+    const { description,location, image_url,dataValues } = this.args;
+
+    
 
     const newPost = await Post.create({
         description : description,
         location : location,
         image_url : image_url,
-        like : like,
-        comment : comment,
-        userId : userId
+        userId : dataValues.id
     })  
 
     return {message : "Post succesfully created "}

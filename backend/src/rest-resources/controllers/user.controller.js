@@ -1,8 +1,9 @@
 import { sendResponse } from "../../helpers/response.helpers.js";
 import { CreateUserService } from "../../services/user/createUser.service.js";
+import { GetUsersService } from "../../services/user/getUsers.service.js";
 
 export class UserController {
-  static async createUser(req, res, next) {
+  static async create(req, res, next) {
     try {
       const { result, successful, errors } = await CreateUserService.execute(
         req.body,
@@ -10,37 +11,27 @@ export class UserController {
           ...req.context,
         }
       );
-
       sendResponse(
         { req, res, next },
         { result, successful, serviceErrors: errors }
       );
     } catch (error) {
-      return res.json({
-        success: false,
-        message: error.message,
-      });
+      next(error);
     }
-    
   }
 
-  static async getUsers(req, res) {
-    const {
-      dbModels: { User, Profile },
-    } = req.context;
+  static async get(req, res, next) {
     try {
-      const users = await User.findAll({
-        include: {
-          model: Profile,
-          as: "profiles",
-        },
+      const { result, successful, errors } = await GetUsersService.execute(
+        req.query,
+        {
+        ...req.context,
       });
 
-      return res.json({
-        success: true,
-        message: "User retrived successfully",
-        result: users,
-      });
+      sendResponse(
+        { req, res, next },
+        { result, successful, serviceErrors: errors }
+      );
     } catch (error) {
       next(error);
     }

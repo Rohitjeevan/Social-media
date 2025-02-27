@@ -9,6 +9,7 @@ export class LoginService extends ServiceBase {
            
          const user = await User.findOne( {where:{email}});
          
+         console.log("here is something ")
          if(!user){
             return this.addError('InvalidCredentialErrorType');
          }

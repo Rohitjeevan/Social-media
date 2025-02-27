@@ -25,7 +25,7 @@ export default (Sequelize, DataTypes) => {
       allowNull: true,
     },
     comment: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: true,
     },
     userId: {
@@ -49,7 +49,7 @@ export default (Sequelize, DataTypes) => {
 
   Post.associate = (models) => {
        Post.hasMany(models.Comment,{
-         foreignKey: 'postId',
+         foreignKey: 'post_id',
          as : 'comments'
        })
   }

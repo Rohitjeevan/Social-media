@@ -1,4 +1,5 @@
 import { StatusCodes } from 'http-status-codes';
+import { error } from 'winston';
 
 export const RequestInputValidationErrorType = {
   name: 'RequestInputValidationError',
@@ -98,3 +99,27 @@ export const CmsPageExistErrorType = {
   description: 'CMS Page already exists',
   errorCode: 3014,
 };
+
+export const PostDoesNotExits = {
+  name : 'PostDoesNotExits',
+  statusCode : StatusCodes.BAD_REQUEST,
+  isOperational : true,
+  description : "Post does not exixt.",
+  errorCode : 3015
+}
+
+export const AlreadyLikedError = {
+    name : 'AlreadyLikedError',
+    statusCode : StatusCodes.BAD_REQUEST,
+    isOperational : true,
+    description: 'Post already Liked By User',
+    errorCode : 3016
+}
+
+export const LikeNotFoundError = {
+  name : 'LikeNotFoundError',
+    statusCode : StatusCodes.BAD_REQUEST,
+    isOperational : true,
+    description: 'Post Not Liked By User',
+    errorCode : 3017
+}

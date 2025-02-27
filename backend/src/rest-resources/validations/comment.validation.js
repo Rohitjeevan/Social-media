@@ -3,10 +3,9 @@ export const CreateCommentValidation = {
       type: "object",
       properties: {
         description: { type: "string" },
-        postId : {type : "number"},
-        userId: { type: "number" },
-      },
-      required: ["description","postId","userId"],
+        post_id : {type : "number"},
+        },
+      required: ["description","post_id"],
     },
     responseSchema: {
       default: {

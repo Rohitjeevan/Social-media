@@ -7,9 +7,9 @@ export class ResetPasswordService extends ServiceBase {
         
         const { dbModels:{User} } = this.context;
          
-        const {old_password,new_password,auth_id} = this.args;
+        const {old_password,new_password,dataValues:authUser} = this.args;
    
-        const user = await  User.findByPk(auth_id);
+        const user = await  User.findByPk(authUser.id);
         
         if(!user) return this.addError('SomethingWrong'); 
 

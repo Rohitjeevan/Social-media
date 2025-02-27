@@ -5,7 +5,7 @@ import ajvKeywords from 'ajv-keywords';
 const ajv = new Ajv({
   allErrors: true,
   removeAdditional: 'all',
-  coerceTypes: true,
+  coerceTypes: false,
   $data: true,
 });
 

@@ -1,42 +1,40 @@
 "use strict";
 
 export default (Sequelize, DataTypes) => {
-  const Like = Sequelize.define("Like", {
+  const Like = Sequelize.define('Like', {
     id: {
       allowNull: false,
       autoIncrement: true,
       primaryKey: true,
       type: DataTypes.INTEGER,
     },
-    userId: {
+    user_id: {
       type: DataTypes.INTEGER,
       allowNull : false,
       references : {
-        model : 'Users',
+        model : 'users',
         key : 'id'
       },
       onUpdate : 'CASCADE',
       onDelete : 'CASCADE',
     },
-    postId: {
+    post_id: {
       type : DataTypes.INTEGER,
       allowNull : false,
       references : {
-        model : 'Posts',
+        model : 'posts',
         key : 'id'
       },
        onUpdate : 'CASCADE',
        onDelete : 'CASCADE'
-    },    
-    createdAt: {
-      allowNull: false,
-      type: DataTypes.DATE,
-    },
-    updatedAt: {
-      allowNull: false,
-      type: DataTypes.DATE,
-    },
-  });
+    },  
+  },
+  {
+    tableName: 'likes',
+    timestamps : true
+  }
+
+);
 
   return Like;
 };

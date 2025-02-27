@@ -4,12 +4,9 @@ export const PostValidation = {
     properties: {
       description: { type: "string" },
       location: { type: "string" },
-      image_url: { type: "string" },
-      like: { type: "number" },
-      comment: { type: "string" },
-      userId: { type: "number" },
+      image_url: { type: "string" }
     },
-    required: [],
+    required: ["description","location"],
   },
   responseSchema: {
     default: {

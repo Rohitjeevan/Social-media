@@ -6,7 +6,7 @@ export class CommentController {
     static async create(req,res,next) {
           try {
                 const { result, successful, errors } = await CreateCommentService.execute(
-                  req.body,
+                  {...req.body,...req.authUser},
                   {
                     ...req.context,
                   }

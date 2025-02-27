@@ -11,6 +11,7 @@ const authRoutes = express.Router();
 authRoutes
    .route('/login')
    .post(
+      requestValidationMiddleware(loginValidation),
     AuthController.login,
     responseValidationMiddleware(loginValidation));
 

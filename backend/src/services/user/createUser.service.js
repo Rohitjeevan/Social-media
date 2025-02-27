@@ -5,13 +5,14 @@ export class CreateUserService extends ServiceBase {
     const {
       dbModels: { User },
     } = this.context;
+
     const { name, email, password, age, city, eligible, dob, mobile, gender } = this.args;
-    
+      
     let emailExist = false;
      emailExist =  await User.findOne({  where : {email}   });
-    
+  
      if(emailExist){
-        this.addError('UsernameExistTypeError');
+       return this.addError('EmailExistsErrorType');
      }
      
     const encryptedPassword = await hashPassword(Buffer.from(password,'base64'));

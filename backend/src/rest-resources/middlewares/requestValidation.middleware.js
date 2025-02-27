@@ -1,6 +1,6 @@
 import localize from 'ajv-i18n';
-import { RequestInputValidationError } from '../../errors/requestInputValidation.error.js';
-import { ajv } from '../../libs/ajv.js';
+import { RequestInputValidationError } from '../../errors/requestInputValidation.error';
+import { ajv } from '../../libs/ajv';
 
 /**
  * A Socket Context Data type
@@ -36,6 +36,7 @@ import { ajv } from '../../libs/ajv.js';
  * })
  */
 export function requestValidationMiddleware({ querySchema = {}, paramsSchema = {}, bodySchema = {} } = {}) {
+
   const compiledQuerySchema = ajv.compile(querySchema);
   const compiledParamsSchema = ajv.compile(paramsSchema);
   const compiledBodySchema = ajv.compile(bodySchema);
@@ -45,10 +46,12 @@ export function requestValidationMiddleware({ querySchema = {}, paramsSchema = {
    * @param {import('express').Response} _
    * @param {import('express').NextFunction} next
    */
+
   return (req, _, next) => {
     const errorPayload = {};
     let error = false;
-    const locale = req.headers.locale.split('-')[0];
+
+    const locale = req.locale.split('-')[0];
 
     if (compiledQuerySchema) {
       if (!compiledQuerySchema(req.query)) {

@@ -1,5 +1,3 @@
-
-
 export default (sequelize, DataTypes) => {
   const User = sequelize.define("User", {
     id: {
@@ -45,23 +43,23 @@ export default (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    otp : {
-      type : DataTypes.INTEGER,
-      allowNull : true
-    }
+    private_account: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false,
+    },
+    otp: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
   });
 
   User.associate = (models) => {
-    // User.hasOne(models.Profile,{
-    //   foreignKey: 'userId',
-    //   as : 'profile'
-    // })
-
-       User.hasMany(models.Profile,{
-         foreignKey: 'userId',
-         as : 'profiles'
-       })
-  }
+    User.hasOne(models.Profile, {
+      foreignKey: "userId",
+      as: "profile",
+    });
+  };
 
   return User;
 };
