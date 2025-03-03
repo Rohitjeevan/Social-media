@@ -2,7 +2,7 @@ import express from 'express';
 import { UserController } from '../../../controllers/user.controller.js';
 import { responseValidationMiddleware } from '../../../middlewares/responseValidation.middleware.js';
 import { requestValidationMiddleware } from '../../../middlewares/requestValidation.middleware.js';
-import { createValidation, getValidation } from '../../../validations/user.validation.js';
+import { createValidation, getSingleUserValidation, getValidation } from '../../../validations/user.validation.js';
 
 const userRoutes = express.Router();
 
@@ -20,6 +20,15 @@ userRoutes
         requestValidationMiddleware(getValidation),
         UserController.get,
         responseValidationMiddleware(getValidation)
-    )
+    );
+
+userRoutes
+     .route('/:id')
+     .get(
+         requestValidationMiddleware(getSingleUserValidation),
+         UserController.getUserById,
+         responseValidationMiddleware(getSingleUserValidation)
+     );
+
 
 export default userRoutes;

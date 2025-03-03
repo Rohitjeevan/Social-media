@@ -28,7 +28,7 @@ export default (Sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       allowNull: true,
     },
-    userId: {
+    user_id: {
       type: DataTypes.INTEGER,
       references: {
         model: "Users",
@@ -37,21 +37,24 @@ export default (Sequelize, DataTypes) => {
       onUpdate: "CASCADE",
       onDelete: "CASCADE",
     },
-    createdAt: {
+    created_at: {
       allowNull: false,
       type: DataTypes.DATE,
     },
-    updatedAt: {
+    updated_at: {
       allowNull: false,
       type: DataTypes.DATE,
     },
   });
 
   Post.associate = (models) => {
+    
        Post.hasMany(models.Comment,{
          foreignKey: 'post_id',
          as : 'comments'
        })
+
+       Post.belongsTo(models.User,{foreignKey: 'user_id', as : 'posts'});
   }
 
   return Post;

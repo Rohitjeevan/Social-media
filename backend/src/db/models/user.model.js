@@ -54,12 +54,23 @@ export default (sequelize, DataTypes) => {
     },
   });
 
-  User.associate = (models) => {
-    User.hasOne(models.Profile, {
-      foreignKey: "userId",
-      as: "profile",
-    });
-  };
+  User.associate = ({ Follow,Post }) => {
 
+    User.hasMany(Follow, {
+      foreignKey: "follower_id",
+      as: "follower",
+    });
+
+    User.hasMany(Follow,{
+      foreignKey : "following_id",
+      as : "following"
+    });
+
+    User.hasMany(Post,{
+       foreignKey : "user_id",
+       as : "posts"
+    });
+
+  };
   return User;
 };

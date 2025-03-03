@@ -20,5 +20,13 @@
 	"AlreadyLikedError": "AlreadyLikedError",
 	"Post already Liked By User": "Post already Liked By User",
 	"LikeNotFoundError": "LikeNotFoundError",
-	"Post Not Liked By User": "Post Not Liked By User"
+	"Post Not Liked By User": "Post Not Liked By User",
+	"UserNotFoundError": "UserNotFoundError",
+	"User not Found ": "User not Found ",
+	"AlreadyFollowedError": "AlreadyFollowedError",
+	"User already Followed.": "User already Followed.",
+	"UserItSelfNotFollowed": "UserItSelfNotFollowed",
+	"A user cannot follow themselves.": "A user cannot follow themselves.",
+	"ResponseInputValidationError": "ResponseInputValidationError",
+	"Response validation failed please refer json schema of response": "Response validation failed please refer json schema of response"
 }

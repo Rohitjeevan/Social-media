@@ -58,3 +58,14 @@ export const getValidation = {
     },
   },
 };
+
+export const getSingleUserValidation = {
+  responseSchema: {
+    default: {
+      type: "object",
+      properties: {
+        user: { type: "object" },
+      },
+    },
+  },
+}

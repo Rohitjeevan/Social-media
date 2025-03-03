@@ -123,3 +123,27 @@ export const LikeNotFoundError = {
     description: 'Post Not Liked By User',
     errorCode : 3017
 }
+
+export const UserNotFoundError = {
+  name : 'UserNotFoundError',
+    statusCode : StatusCodes.BAD_REQUEST,
+    isOperational : true,
+    description: 'User not Found ',
+    errorCode : 3018
+}
+ 
+export const AlreadyFollowedError = {
+  name : 'AlreadyFollowedError',
+  statusCode : StatusCodes.BAD_REQUEST,
+  isOperational : true,
+  description: 'User already Followed.',
+  errorCode : 3019
+}
+
+export const  UserItSelfNotFollowed = {
+  name : 'UserItSelfNotFollowed',
+  statusCode : StatusCodes.BAD_REQUEST,
+  isOperational : true,
+  description: 'A user cannot follow themselves.',
+  errorCode : 3020
+}
