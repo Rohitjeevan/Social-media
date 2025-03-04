@@ -28,5 +28,7 @@
 	"UserItSelfNotFollowed": "UserItSelfNotFollowed",
 	"A user cannot follow themselves.": "A user cannot follow themselves.",
 	"ResponseInputValidationError": "ResponseInputValidationError",
-	"Response validation failed please refer json schema of response": "Response validation failed please refer json schema of response"
+	"Response validation failed please refer json schema of response": "Response validation failed please refer json schema of response",
+	"InvalidCredentialError": "InvalidCredentialError",
+	"Invalid credentials, please check credentials again": "Invalid credentials, please check credentials again"
 }

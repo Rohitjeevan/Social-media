@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import BaseError from '../errors/base.error';
 import * as errorTypes from '../libs/errorTypes';
-import { extractErrorAttributes } from '../utills/error.utils';
+import { extractErrorAttributes } from '../utills/error.utils.js';
 
 export const sendResponse = ({ req, res, next }, { successful, result, serviceErrors, defaultError }) => {
   if (successful && !_.isEmpty(result)) {

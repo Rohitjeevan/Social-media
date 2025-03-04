@@ -26,7 +26,7 @@ export class PostController {
   static async getAllPost(req,res,next) {
          try {
             const {result ,successful,errors} = await GetPostService.execute(
-              req.body,
+              req.authUser,
               {
                 ...req.context
               }

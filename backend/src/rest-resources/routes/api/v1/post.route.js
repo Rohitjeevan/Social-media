@@ -20,6 +20,7 @@ postRoutes
 postRoutes
     .route('/get')
     .get(
+        authMiddleware,
         requestValidationMiddleware(getPostValidation),
         PostController.getAllPost,
         responseValidationMiddleware(getPostValidation)
